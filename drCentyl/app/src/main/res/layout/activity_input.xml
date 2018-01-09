@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.jakup.drcentyl.InputActivity"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/waga"
+            android:digits="0123456789."
+            android:inputType="numberDecimal"
+            android:text="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker2" />
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/wzrost"
+            android:inputType="numberDecimal"
+            android:text="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+
+        <EditText
+            android:id="@+id/pressure"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/cisnienie"
+            android:inputType="numberDecimal"
+            android:visibility="gone"
+            android:text="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/height" />
+
+
+        <EditText
+            android:id="@+id/head"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/glowa"
+            android:inputType="numberDecimal"
+            android:visibility="gone"
+            android:text="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pressure" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dane"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.502" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="passData"
+            android:text="@string/licz"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="8dp"
+            android:textSize="22sp"
+            app:layout_constraintTop_toBottomOf="@+id/head" />
+
+        <DatePicker
+            android:id="@+id/datePicker2"
+            android:layout_width="296dp"
+            android:layout_height="137dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:addStatesFromChildren="false"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:elevation="0dp"
+            android:filterTouchesWhenObscured="false"
+            android:overScrollMode="ifContentScrolls"
+            android:spinnersShown="true"
+            android:touchscreenBlocksFocus="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toggleButton"
+            tools:layout_editor_absoluteY="139dp" />
+
+        <Button
+            android:id="@+id/moreOptions"
+            android:onClick="more"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rozwin"
+            android:visibility="visible"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            android:background="@drawable/button_with_border"
+            app:layout_constraintLeft_toLeftOf="@+id/button"/>
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textOff="Dziewczynka"
+            android:textOn="Chłopiec"
+            android:text="ToggleButton"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            android:onClick="onGenderChange"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.501" />
+
+        <Button
+            android:id="@+id/weightminus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/button_with_border"
+            android:text="-"
+            android:onClick="valueChange"
+            app:layout_constraintLeft_toRightOf="@+id/weight"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker2" />
+
+        <Button
+            android:id="@+id/weightplus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="+"
+            android:onClick="valueChange"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/weightminus"
+            android:background="@drawable/button_with_border"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker2"/>
+
+        <Button
+            android:id="@+id/heightminus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:text="-"
+            android:onClick="valueChange"
+            app:layout_constraintLeft_toRightOf="@+id/height"
+            android:background="@drawable/button_with_border"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/weight"/>
+
+        <Button
+            android:id="@+id/heightplus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="16dp"
+            android:text="+"
+            android:onClick="valueChange"
+            app:layout_constraintLeft_toRightOf="@+id/heightminus"
+            app:layout_constraintTop_toBottomOf="@+id/weight"
+            android:background="@drawable/button_with_border"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
+
+        <Button
+            android:id="@+id/pressureminus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:text="-"
+            android:onClick="valueChange"
+            app:layout_constraintLeft_toRightOf="@+id/pressure"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/height"
+            android:background="@drawable/button_with_border"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/pressureplus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="2dp"
+            android:text="+"
+            android:onClick="valueChange"
+            app:layout_constraintLeft_toRightOf="@+id/pressureminus"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/height"
+            android:background="@drawable/button_with_border"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/circumminus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="-"
+            android:onClick="valueChange"
+            app:layout_constraintLeft_toRightOf="@+id/head"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/pressure"
+            android:background="@drawable/button_with_border"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/circumplus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="+"
+            android:onClick="valueChange"
+            app:layout_constraintLeft_toRightOf="@+id/circumminus"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/pressure"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.067"
+            android:background="@drawable/button_with_border"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="108dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="16dp"
+            android:text="Ciśnienie"
+            android:textSize="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/height"
+            app:layout_constraintRight_toLeftOf="@+id/pressure"
+            android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="106dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="22dp"
+            android:text="Ob glowy"
+            android:textSize="25dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintRight_toLeftOf="@+id/head"
+            app:layout_constraintTop_toBottomOf="@+id/pressure"
+            app:layout_constraintLeft_toRightOf="@+id/textView6"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="97dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="75dp"
+            android:text="Wzrost"
+            android:textSize="25dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/weight"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="97dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="14dp"
+            android:text="Waga"
+            android:textSize="25dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/weight"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker2" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

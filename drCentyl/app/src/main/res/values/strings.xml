@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DrCentyl</string>
+    <string name="mainButton">Siatki centylowe</string>
+    <string name="aboutButton">O aplikacji</string>
+    <string name="waga">Waga</string>
+    <string name="wzrost">Wzrost</string>
+    <string name="glowa">Obwód głowy</string>
+    <string name="cisnienie">Ciśnienie</string>
+    <string name="licz">Oblicz</string>
+    <string name="rozwin"><u>Ciśnienie i obwód głowy</u></string>
+    <string name="zwin"><u>Mniej opcji</u></string>
+    <string name="dane">Dane pacjenta</string>
+</resources>
